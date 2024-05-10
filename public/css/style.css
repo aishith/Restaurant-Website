@@ -1,0 +1,464 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+nav{
+  width:100%;   
+  overflow: hidden;
+  background: #c6e709;
+}
+ul{
+   width:800%;
+   margin:0 auto;
+   padding:0;
+}
+ul li{
+  
+  list-style: none;
+  display: inline-block;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+}
+
+nav p{ 
+  padding-left: 0px;
+  font-family:'Knewave', cursive;
+  color:rgb(38, 16, 161);
+  font-size: 35px;
+  float:left;
+} 
+
+ul li:hover {
+  background-color: #e4e3e3;
+}
+ul li a{
+  color: black; 
+  text-decoration: none; 
+}
+.toggle
+{
+  width:100%;
+  padding:10px 350px;
+  background:rgb(38, 16, 161);
+  text-align: right;
+  box-sizing:border-box ;
+  color:white;
+  font-size: 20px;
+  display:none;
+}
+@media(max-width:768px)
+{
+  .toggle{
+    display:block;
+  }
+  ul{
+    width:100%;
+    display:none;
+  }
+  ul li{
+    display: block;
+    text-align: center;
+  } 
+  .active{
+    display:block;
+  }
+}
+
+.bd-grid{
+  display: grid;
+  gap: 1.5rem;
+}
+.home__container{
+
+  width:100%;
+  padding:1%;
+  height:588px;
+  background-image:  url("../images/bgpic2.jpg");
+  background-size: cover;
+  border-radius: 6px ;
+  filter: blur(2px);
+  -webkit-filter: blur(0.5px);
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  border-radius: 14px ;
+  position: relative;
+  left: 50%;
+  top:25%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 45%;
+  padding: 10px;
+  text-align: center;
+}
+.bg2-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  border: 3px solid #f1f1f1;
+  border-radius: 14px ;
+  position: relative;
+  left: 50%;
+  top:35%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 35%;
+  padding: 8px;
+  text-align: center;
+}
+.button{
+  text-align: center;
+  top: 38%;
+  position: relative;
+}
+.booking{
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/booking2.jpg") center/cover no-repeat;
+  border-radius: 2px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 20px;
+} 
+.form-control{
+  display: block;
+  width: 100%;
+  margin: 5px 12px;
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  border: 1px;
+  border-radius: 4px ;
+  border-bottom: 1px solid #eee;
+  font-weight: 300;
+}
+.Menu{
+  background-color: white;
+  width:100%;
+  height:500px;
+}
+.Services{
+  background-color: white;
+  width:100%;
+  height: 100%;
+}
+.services_container{
+  background-color: white;
+  width:100%;
+  height:100%;
+  text-align: center;
+  padding: 2em 4em 2em 4em;
+}
+.services_container.p,h2{
+  text-align: center;
+}
+.leftpane {
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: white;
+  border-collapse: collapse;
+  padding-top: 100px;
+  color:black;
+  font-family: 'Leckerli One', cursive;
+  text-align: center;
+}
+
+.middlepane {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: white;
+  border-collapse: collapse;
+  padding-top: 100px;
+  color:black;
+  font-family: 'Leckerli One', cursive;
+  text-align: center;
+}
+
+.rightpane {
+width: 25%;
+height: 100%;
+position: relative;
+float: right;
+background-color: white;
+border-collapse: collapse;
+padding-top: 100px;
+color:black;
+font-family: 'Leckerli One', cursive;
+text-align: center;
+}
+
+.toppane {
+width: 100%;
+height: 25px;
+border-collapse: collapse;
+background-color:white;
+padding-top: 50px;
+color:#738605de;
+font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+font-family: 'Leckerli One', cursive;
+text-align: center;
+}
+.overimg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 1em;
+}
+.about
+{
+  width:100%;
+  height: 100%;
+}
+.working_time{
+width: 100%;
+height:600px;
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/about1.jpg") center/cover no-repeat;
+position: relative;
+border-collapse: collapse;
+font-size:20px;
+color:white;
+font-family: 'Leckerli One', cursive;
+text-align: center;
+padding-top: 50px;
+}
+.contact{
+  width:100%;
+  height:100%;
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+}
+
+.contact_container{background-color: white;
+  width:100%;
+  height:100%;
+  text-align: center;
+  padding: 2em ;
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))/3);
+}
+.about2_container{
+  height:600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/about2.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 150px 0px 0px 50px;
+  text-align: left;
+  font-family:cursive;
+  font-size: 20px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  padding-top:100px;
+  width:auto;
+  margin:50px auto;
+}
+.title{
+  text-align:center;
+  margin-bottom:60px;
+}
+.title h4{
+  text-transform:capitalize;
+  font-size:36px;
+  position:relative;
+  display:inline-block;
+  padding-bottom:10px;
+}
+.title h4 span{
+  display:block;
+  font-size:18px;
+  font-style:italic;
+  margin-bottom:10px;
+}
+.title h4:before{
+  position:absolute;
+  content:"";
+  width:100px;
+  height:2px;
+  background-color:#ff7720;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+}
+.menu{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.single-menu{
+  flex-basis:580px;
+  margin-bottom:40px;
+  padding-bottom:40px;
+  border-bottom:1px solid #ddd;
+  max-width: 500px;
+  flex-wrap: nowrap;
+}
+.single-menu:nth-child(5), .single-menu:nth-child(6){
+  border-bottom:0;
+}
+.single-menu{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+.single-menu:hover img{
+  border-radius:0;
+}
+.single-menu img{
+  max-width:180px;
+  margin-right:30px;
+  border-radius:50%;
+  border:1px solid #ddd;
+  padding:3px;
+  transition:.5s;
+}
+.single-menu h4{
+  text-transform:capitalize;
+  font-size:22px;
+  border-bottom:1px dashed #333;
+  margin-bottom:5px;
+  padding-bottom:5px;
+}
+.single-menu h4 span{
+  float:right;
+  color:#ff7720;
+  font-style:italic;
+}
+.menu_container {
+  height:600px;
+  overflow-y: auto;
+  overflow-x: visible;
+  white-space: nowrap;
+}
+
+/*login*/
+.container {
+  position: relative;
+  top: 50%;
+  margin-left: 50%;
+  width:265px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px black;
+  padding: 20px 30px 300px 20px;
+  text-align: center;
+
+}
+.container .inputbox,
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.container .inputbox:last-child {
+    margin-bottom: 0;
+}
+
+.container.inputbox input,
+button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 1.5px solid black;
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-align: center;
+}
+.container.inputbox.button,table,td,th{
+  text-align: center;
+  padding: 15px 5px 5px 5px;
+}
+
+.container .inputbox button {
+    position: relative;
+    background: rgb(0, 183, 255);
+    color: white;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.container .inputbox button:hover {
+    background-color: #e91e63;
+}
+
+.container .inputbox a:hover {
+    background-color: #e91e63;
+}
+.media{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+}
+
+.media ul{
+  list-style: none;
+  display: flex;
+}
+
+.media li{
+  line-height: 2em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media li a{
+  color: black;
+  position: relative;
+  display: inline-block;
+  margin-left: 30px;
+  padding: 10px;
+}
+
+.media li a:hover{
+  color: white;
+}
+
+.media li a i{
+  font-size: 30px;
+}
+.bgcontainer{
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/container_bg.jpg") center/cover no-repeat;
+   width:100%;
+   height: 650px;
+}

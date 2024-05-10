@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RUCHI-19BCT0004,32,200</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+      <div class="toggle">
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+      </div>
+      <p>RUCHI</p>
+      <ul>
+        <li></li>
+        <li></li>
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/menu" >Menu</a></li>
+        <li><a href="/booking" >Reservation </a></li>
+        <li><a href="/services" >Services</a></li>
+        <li><a href="/about" >About Us</a></li>
+        <li><a href="/contactus">Contact Us</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav> 
+    </div>
+    <!-- RESERVATION-->
+<section class="booking" id=booking>
+    <form method="post" action="/booking" onSubmit="return validateForm();">
+      <div style="max-width: 380px;">
+      </div>
+      <br></br>
+      <div style="padding-bottom: 18px;font-size : 26px;">Table Reservation</div>
+      <div style="padding-bottom: 18px;font-size : 18px;">We would be glad to reserve a table for you at our restaurant!</div>
+      <div style="padding-bottom: 18px;" >Name<span style="color: red;"> *</span><br/>
+      <input type="text" id="name" name="name" style="max-width : 350px;" class="form-control" required/>
+      </div>
+      <div style="padding-bottom: 18px;" >Phone Number<span style="color: red;"> *</span><br/>
+      <input type="text" id="phoneno" maxlength="10" minlength="10" pattern="[1-9]{1}[0-9]{9}" name="phoneno" style="max-width : 350px;" class="form-control" required/>
+      </div>
+      <div style="padding-bottom: 18px;">Email<span style="color: red;" required> *</span><br/>
+      <input type="text" id="email1" name="email1" style="max-width : 350px;" class="form-control" required/>
+      </div>
+      <div style="padding-bottom: 18px;">Date<span style="color: red;"> *</span><br/>
+      <input type="date" id="date" name="date" style="max-width : 250px;" class="form-control" required/>
+      </div>
+      <div style="padding-bottom: 18px;">Time<span style="color: red;"> *</span><br/>
+      <input type="time" id="time" name="time" style="max-width : 250px;" class="form-control" required/>
+      </div>
+      <div style="padding-bottom: 18px;">Number of Attendees<span style="color: red;"> *</span><br/>
+      <select id="attende" name="attende" style="max-width : 250px;" class="form-control" required><option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>6+ (Specify in Comments)</option>
+      </select>
+      </div>
+      <div style="padding-bottom: 18px;">Comments / Additional Requests<br/>
+      <textarea id="comment" false name="comment" style="max-width : 350px;" rows="6" class="form-control"></textarea>
+      </div>
+      <div style="padding-bottom: 18px;"><input value="Submit" type="submit"/></div>
+      </form>
+    </section>
+       <!-- java scripts -->
+ <script type="text/javascript">
+    function validateForm() {
+    if (isEmpty(document.getElementById('name').value.trim())) {
+    alert('Name is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('phoneno').value.trim())) {
+    alert('Phone Number is required!');
+    return false;
+    }
+    if (!validateEmail(document.getElementById('email1').value.trim())) {
+    alert('Email must be a valid email address!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('date').value.trim())) {
+    alert('Date is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('time').value.trim())) {
+    alert('Time is required!');
+    return false;
+    }
+    return true;
+    }
+    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+    function validateEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+    return isEmpty(email) || re.test(email);
+    }
+   
+    
+    </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.menu').click(function(){
+        $('ul').toggleClass('active');
+      })
+    })
+      </script>
+  </body>
+  </html>
